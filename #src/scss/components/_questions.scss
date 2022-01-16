@@ -1,0 +1,137 @@
+.questions {
+  padding: 109px 0 110px;
+  background: linear-gradient(115.71deg, #EFF3FF 17.28%, #FFF5F2 104.92%);
+
+  @media(max-width: $md3) {
+    padding: 109px 0 81px;
+  }
+
+  @media(max-width: $md4) {
+    padding: 60px 0;
+  }
+
+  &__title {
+    margin-bottom: 55px;
+  }
+}
+
+.questions__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.questions__accordion {
+  width: 100%;
+}
+
+.accordion__item {
+  border-radius: 30px;
+  font-weight: 400;
+  background-color: #fff;
+  color: #333;
+}
+
+.accordion__item.active .accordion__title {
+
+  background: $colorBlue;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  border: 2px solid $colorBlue;
+  border-radius: 30px 30px 0px 0px;
+  outline: none;
+
+  @media(max-width: $md3) {
+    font-size: 14px;
+  }
+}
+
+.accordion__item.active .accordion__content {
+  display: block;
+}
+
+.accordion__item+.accordion__item {
+  margin-top: 5px;
+}
+
+.accordion__title a {
+  font-family: 'Verdana', sans-serif;
+  color: #2e2e2e;
+  font-size: 18px;
+  line-height: 20px;
+  display: block;
+  padding: 20px 50px 20px 25px;
+  position: relative;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  border-radius: 30px;
+  transition: all .3s;
+
+  @media(max-width: $md3) {
+    padding: 17px 20px;
+    padding-right: 35px;
+    font-size: 14px;
+  }
+}
+
+.accordion__title a:hover {
+  background: $colorBlue;
+  color: #FFF;
+  outline: none;
+}
+
+
+.accordion__title a:hover svg path {
+  fill: #fff;
+  stroke: #fff;
+}
+
+.accordion__title.active a {
+
+  font-weight: bold;
+  background: $colorBlue;
+  border: 2px solid $colorBlue;
+  border-radius: 30px 30px 0px 0px;
+  outline: none;
+  color: #fff;
+}
+
+.accordion__title a svg {
+  position: absolute;
+  right: 25px;
+  transition: all .3s;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media(max-width: $md3) {
+    right: 15px;
+  }
+}
+
+.accordion__title.active a svg {
+  transform: rotate(180deg);
+}
+
+.accordion__title.active a svg path {
+  fill: #fff;
+  stroke: #fff;
+}
+
+.accordion__content {
+  font-size: 14px;
+  line-height: 20px;
+  padding: 20px 25px;
+  background: #fff;
+  border: 2px solid $colorBlue;
+  border-radius: 0px 0px 30px 30px;
+  color: #333;
+  border-top: none;
+  display: none;
+
+  @media(max-width: $md3) {
+    padding: 20px;
+    padding-top: 15px;
+    font-size: 11px;
+  }
+}

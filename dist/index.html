@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/vendor/jquery-ui.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__burger">
+        <div class="burger__icon icon-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="header__logo">
+        <img src="img/logo.svg" alt="logo">
+      </div>
+      <nav class="header__nav nunito">
+        <ul class="header__list">
+          <li class="header__list-elem active">
+            <a href="#" class="header__link">Як отримати кредит</a>
+          </li>
+          <li class="header__list-elem">
+            <a href="#" class="header__link">Чому ми?</a>
+          </li>
+          <li class="header__list-elem">
+            <a href="#" class="header__link">Мобильний додаток</a>
+          </li>
+          <li class="header__list-elem">
+            <a href="#" class="header__link">Питання</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__call">
+        <button class="header__call-btn btn btn-transparent">
+          <span>Дзвінок</span>
+          <img src="img/icon/phone-call.svg" alt="" class="header__call-icon">
+        </button>
+        <div class="header__call-service">
+          <div class="header__call-label">Служба підтримки 24/7</div>
+          <a href="tel:0800987765876" class="header__call-phone">0 800 987 765 876</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <div class="container mobile-menu__container">
+      <div class="header__call-service header__call-service_mob">
+        <div class="header__call-label">Служба підтримки 24/7</div>
+        <a href="tel:0800987765876" class="header__call-phone">0 800 987 765 876</a>
+      </div>
+    </div>
+  </div>
+</header>
+    <section class="credits">
+  <div class="container credits-container">
+    <div class="credits__wrapper">
+      <div class="credits__content">
+        <div class="credits__title">
+          кредит до 500 000 грн
+        </div>
+        <div class="credits__text">
+          <p>Отримайте кредит на картку без надання додаткових документів, посвідчень та довідок до 50 000 грн</p>
+        </div>
+        <div class="credits__info">*якщо кредит більше ніж 50 000 грн, потрібна довідка про доходи</div>
+      </div>
+      <div class="credits__calc">
+        <div class="credits__calc-wrap">
+          <div class="wrap__content">
+            <div class="credits__calc-left">
+              <div class="credits__calc-header">
+                <div class="credits__calc-title">Параметри кредиту</div>
+              </div>
+              <div class="сalc__info">
+                <div class="range clearfix">
+                  <div class="range__up">
+                    <div class="info__label">Сума кредиту</div>
+                    <div class="info__inp">
+                      <div class="info__inp-btn sum_minus">
+                        <span></span>
+                      </div>
+                      <input type="text" class="text summ" id="summ" name="s" value="8000" data-max="10000"
+                        data-min="1000" data-step="500" data-k="1" multiple>
+                      <div class="info__inp-btn sum_plus">
+                        <span></span>
+                        <span class="up"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider"></div>
+                </div>
+                <div class="сalc__quantity">
+                  <div class="quantity__left">
+                    1000 <span>грн</span>
+                  </div>
+                  <div class="quantity__right">
+                    10 000 <span>грн</span>
+                  </div>
+                </div>
+              </div>
+              <div class="сalc__info">
+                <div class="range clearfix">
+                  <div class="range__up range__up--term">
+                    <div class="info__label">Строк кредиту</div>
+                    <div class="info__inp">
+                      <div class="info__inp-btn date_minus">
+                        <span></span>
+                      </div>
+                      <input type="text" class="text term" id="term" name="s" value="20" data-max="36" data-min="3"
+                        data-min-event="0" data-step="1" data-k="1">
+                      <div class="info__inp-btn date_plus">
+                        <span></span>
+                        <span class="up"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider">
+                  </div>
+                </div>
+                <div class="сalc__quantity">
+                  <div class="quantity__left">
+                    3 <span>месяца</span>
+                  </div>
+                  <div class="quantity__right">
+                    36 <span>месяцев</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="credits__calc-right">
+              <div class="calc__calculation">
+                <div class="calculation__return calculation__content calculation__content--bg">
+                  <div class="return__label label">*Щомісячний платіж</div>
+                  <div class="return__sum calculation__sum">
+                    <span id="return__sum">
+                      8 055
+                    </span>
+                    <span> грн</span>
+                  </div>
+                </div>
+                <div class="calc__calculation-info">* Розрахунок, що проводиться, приблизний. Точніші дані Ви можете
+                  уточнити у нашого співробітника банку</div>
+                <div class="calculation__quantity calculation__content" style="display: none;">
+                  <div class="date__label label">Количество платежей</div>
+                  <div id="quantity__sum" class="quantity__sum calculation__sum">
+                    12
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="credits__calc-button">
+              <button class="credits__calc-btn btn" data-popup="#popup__login">
+                Повернутися на головну
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="instruction">
+  <div class="container">
+    <div class="instruction__head">
+      <h3 class="instruction__title section-title">Як отримати кредит готівкою </h3>
+      <div class="instruction__text">
+        <p>Жодних черг за довідками та бюрократії – щоб отримати кредит, вам потрібно пройти 3 простих кроки</p>
+      </div>
+    </div>
+    <div class="instruction__wrapper">
+      <div class="instruction-item">
+        <div class="instruction-item__icon">
+          <img src="img/instruction/icon_1.svg" alt="">
+        </div>
+        <div class="instruction-item__content">
+          <div class="instruction-item__label">Заповніть коротку форму</div>
+          <div class="instruction-item__text">Вкажіть ПІБ, ваш контактний номер телефону та ІПН</div>
+        </div>
+      </div>
+      <div class="instruction-item">
+        <div class="instruction-item__icon">
+          <img src="img/instruction/icon_2.svg" alt="">
+        </div>
+        <div class="instruction-item__content">
+          <div class="instruction-item__label">Наш співробітник зв'язується з вами</div>
+          <div class="instruction-item__text">Наш співробітник протягом 3 хвилин зв'яжеться з вами та заповнить заявку
+          </div>
+        </div>
+      </div>
+      <div class="instruction-item">
+        <div class="instruction-item__icon">
+          <img src="img/instruction/icon_3.svg" alt="">
+        </div>
+        <div class="instruction-item__content">
+          <div class="instruction-item__label">Отримання кредиту</div>
+          <div class="instruction-item__text">Підготуйте паспорт та ІПН та отримуйте кредит!</div>
+        </div>
+      </div>
+    </div>
+    <button class="instruction__submit-btn btn">Подати заявку</button>
+  </div>
+</section>
+    <section class="parameters">
+  <div class="container">
+    <h2 class="parameters__title section-title">параметри продукту</h2>
+    <div class="parameters__wrapper">
+      <div class="parameters-item">
+        <div class="parameters-item__icon">
+          <img src="img/parameters/icon_1.svg" alt="">
+        </div>
+        <div class="parameters-item__content">
+          <div class="parameters-item__label">Сума кредиту</div>
+          <div class="parameters-item__text">від 1 000,00 до 500 000,00 грн</div>
+        </div>
+      </div>
+      <div class="parameters-item">
+        <div class="parameters-item__icon">
+          <img src="img/parameters/icon_2.svg" alt="">
+        </div>
+        <div class="parameters-item__content">
+          <div class="parameters-item__label">Схема погашення</div>
+          <div class="parameters-item__text">Ануїтет</div>
+        </div>
+      </div>
+      <div class="parameters-item">
+        <div class="parameters-item__icon">
+          <img src="img/parameters/icon_3.svg" alt="">
+        </div>
+        <div class="parameters-item__content">
+          <div class="parameters-item__label">Валюта</div>
+          <div class="parameters-item__text">Гривня</div>
+        </div>
+      </div>
+      <div class="parameters-item">
+        <div class="parameters-item__icon">
+          <img src="img/parameters/icon_4.svg" alt="">
+        </div>
+        <div class="parameters-item__content">
+          <div class="parameters-item__label">Строк кредитування</div>
+          <div class="parameters-item__text">6, 12, 24, 36, 48, 60 міс</div>
+        </div>
+      </div>
+      <div class="parameters-item">
+        <div class="parameters-item__icon">
+          <img src="img/parameters/icon_5.svg" alt="">
+        </div>
+        <div class="parameters-item__content">
+          <div class="parameters-item__label">Процентна ставка за кредитом</div>
+          <div class="parameters-item__text">0,01% річних</div>
+        </div>
+      </div>
+      <div class="parameters-item">
+        <div class="parameters-item__icon">
+          <img src="img/parameters/icon_6.svg" alt="">
+        </div>
+        <div class="parameters-item__content">
+          <div class="parameters-item__label">Без страховки та поручителів</div>
+          <div class="parameters-item__text">без додаткових витрат часу</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="questions">
+  <div class="container">
+    <h2 class="questions__title section-title">усе прозоро!</h2>
+    <div class="questions__inner">
+      <div class="questions__accordion">
+        <div class="accordion__item">
+          <div class="accordion__title">
+            <a href="#">Як отримати кредитний ліміт
+              <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.03626 4.9939C5.25762 4.9939 5.42364 4.89438 5.58966 4.79488L9.68481 1.36204C10.0169 1.06354 10.0722 0.615803 9.79549 0.267546C9.46345 -0.0309608 8.96539 -0.080718 8.57801 0.168037C8.57801 0.168037 8.57801 0.168025 8.52267 0.217776L4.98092 3.1531L1.43916 0.217776C1.10712 -0.0807301 0.553725 -0.0807301 0.221686 0.217776C-0.110354 0.516283 -0.110354 1.0138 0.221686 1.31231C0.221686 1.31231 0.221686 1.31229 0.277026 1.36204L4.42752 4.79488C4.59354 4.89438 4.8149 4.9939 5.03626 4.9939Z"
+                  fill="#333333" />
+              </svg>
+            </a>
+          </div>
+          <div class="accordion__content">Так, ви можете погасити кредит достроково. Більш того, чим раніше ви
+            погашаєте кредит, тим менше Вам доведеться платити відсотків за користування ним. Ви можете
+            побачити суму фактичної заборгованості за відсотками і кредиту станом на будь-який день в
+            Особистому Кабінеті</div>
+        </div>
+        <div class="accordion__item">
+          <div class="accordion__title">
+            <a href="#">Чому мій кредитний ліміт дорівнює нулю <svg width="10" height="5" viewBox="0 0 10 5" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.03626 4.9939C5.25762 4.9939 5.42364 4.89438 5.58966 4.79488L9.68481 1.36204C10.0169 1.06354 10.0722 0.615803 9.79549 0.267546C9.46345 -0.0309608 8.96539 -0.080718 8.57801 0.168037C8.57801 0.168037 8.57801 0.168025 8.52267 0.217776L4.98092 3.1531L1.43916 0.217776C1.10712 -0.0807301 0.553725 -0.0807301 0.221686 0.217776C-0.110354 0.516283 -0.110354 1.0138 0.221686 1.31231C0.221686 1.31231 0.221686 1.31229 0.277026 1.36204L4.42752 4.79488C4.59354 4.89438 4.8149 4.9939 5.03626 4.9939Z"
+                  fill="#333333" />
+              </svg></a>
+          </div>
+          <div class="accordion__content">Да, вы можете погасить кредит досрочно. Более того, чем
+            раньше вы погашаете кредит, тем меньше Вам придется платить процентов за пользование им.
+            Вы можете увидеть сумму фактической задолженности по процентам и кредиту по состоянию на
+            любой день в Личном Кабинете.</div>
+        </div>
+        <div class="accordion__item">
+          <div class="accordion__title">
+            <a href="#">Коли можна подати повторну заявку після отримання відмови? <svg width="10" height="5"
+                viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.03626 4.9939C5.25762 4.9939 5.42364 4.89438 5.58966 4.79488L9.68481 1.36204C10.0169 1.06354 10.0722 0.615803 9.79549 0.267546C9.46345 -0.0309608 8.96539 -0.080718 8.57801 0.168037C8.57801 0.168037 8.57801 0.168025 8.52267 0.217776L4.98092 3.1531L1.43916 0.217776C1.10712 -0.0807301 0.553725 -0.0807301 0.221686 0.217776C-0.110354 0.516283 -0.110354 1.0138 0.221686 1.31231C0.221686 1.31231 0.221686 1.31229 0.277026 1.36204L4.42752 4.79488C4.59354 4.89438 4.8149 4.9939 5.03626 4.9939Z"
+                  fill="#333333" />
+              </svg></a>
+          </div>
+          <div class="accordion__content">Да, вы можете погасить кредит досрочно. Более того, чем
+            раньше вы погашаете кредит, тем меньше Вам придется платить процентов за пользование им.
+            Вы можете увидеть сумму фактической задолженности по процентам и кредиту по состоянию на
+            любой день в Личном Кабинете.</div>
+        </div>
+        <div class="accordion__item">
+          <div class="accordion__title">
+            <a href="#">Погашення позики і продовження термінів<svg width="10" height="5" viewBox="0 0 10 5" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.03626 4.9939C5.25762 4.9939 5.42364 4.89438 5.58966 4.79488L9.68481 1.36204C10.0169 1.06354 10.0722 0.615803 9.79549 0.267546C9.46345 -0.0309608 8.96539 -0.080718 8.57801 0.168037C8.57801 0.168037 8.57801 0.168025 8.52267 0.217776L4.98092 3.1531L1.43916 0.217776C1.10712 -0.0807301 0.553725 -0.0807301 0.221686 0.217776C-0.110354 0.516283 -0.110354 1.0138 0.221686 1.31231C0.221686 1.31231 0.221686 1.31229 0.277026 1.36204L4.42752 4.79488C4.59354 4.89438 4.8149 4.9939 5.03626 4.9939Z"
+                  fill="#333333" />
+              </svg></a>
+          </div>
+          <div class="accordion__content">Да, вы можете погасить кредит досрочно. Более того, чем
+            раньше вы погашаете кредит, тем меньше Вам придется платить процентов за пользование им.
+            Вы можете увидеть сумму фактической задолженности по процентам и кредиту по состоянию на
+            любой день в Личном Кабинете.</div>
+        </div>
+        <div class="accordion__item">
+          <div class="accordion__title">
+            <a href="#">Чи можна погасити кредит достроково?<svg width="10" height="5" viewBox="0 0 10 5" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.03626 4.9939C5.25762 4.9939 5.42364 4.89438 5.58966 4.79488L9.68481 1.36204C10.0169 1.06354 10.0722 0.615803 9.79549 0.267546C9.46345 -0.0309608 8.96539 -0.080718 8.57801 0.168037C8.57801 0.168037 8.57801 0.168025 8.52267 0.217776L4.98092 3.1531L1.43916 0.217776C1.10712 -0.0807301 0.553725 -0.0807301 0.221686 0.217776C-0.110354 0.516283 -0.110354 1.0138 0.221686 1.31231C0.221686 1.31231 0.221686 1.31229 0.277026 1.36204L4.42752 4.79488C4.59354 4.89438 4.8149 4.9939 5.03626 4.9939Z"
+                  fill="#333333" />
+              </svg>
+            </a>
+          </div>
+          <div class="accordion__content">Да, вы можете погасить кредит досрочно. Более того, чем
+            раньше вы погашаете кредит, тем меньше Вам придется платить процентов за пользование им.
+            Вы можете увидеть сумму фактической задолженности по процентам и кредиту по состоянию на
+            любой день в Личном Кабинете.</div>
+        </div>
+        <div class="accordion__item">
+          <div class="accordion__title">
+            <a href="#">Можна погашати кредит частинами?<svg width="10" height="5" viewBox="0 0 10 5" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.03626 4.9939C5.25762 4.9939 5.42364 4.89438 5.58966 4.79488L9.68481 1.36204C10.0169 1.06354 10.0722 0.615803 9.79549 0.267546C9.46345 -0.0309608 8.96539 -0.080718 8.57801 0.168037C8.57801 0.168037 8.57801 0.168025 8.52267 0.217776L4.98092 3.1531L1.43916 0.217776C1.10712 -0.0807301 0.553725 -0.0807301 0.221686 0.217776C-0.110354 0.516283 -0.110354 1.0138 0.221686 1.31231C0.221686 1.31231 0.221686 1.31229 0.277026 1.36204L4.42752 4.79488C4.59354 4.89438 4.8149 4.9939 5.03626 4.9939Z"
+                  fill="#333333" />
+              </svg>
+            </a>
+          </div>
+          <div class="accordion__content">Да, вы можете погасить кредит досрочно. Более того, чем
+            раньше вы погашаете кредит, тем меньше Вам придется платить процентов за пользование им.
+            Вы можете увидеть сумму фактической задолженности по процентам и кредиту по состоянию на
+            любой день в Личном Кабинете.</div>
+        </div>
+        <div class="accordion__item">
+          <div class="accordion__title">
+            <a href="#">Погашення кредиту в терміналах самообслуговування<svg width="10" height="5" viewBox="0 0 10 5"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.03626 4.9939C5.25762 4.9939 5.42364 4.89438 5.58966 4.79488L9.68481 1.36204C10.0169 1.06354 10.0722 0.615803 9.79549 0.267546C9.46345 -0.0309608 8.96539 -0.080718 8.57801 0.168037C8.57801 0.168037 8.57801 0.168025 8.52267 0.217776L4.98092 3.1531L1.43916 0.217776C1.10712 -0.0807301 0.553725 -0.0807301 0.221686 0.217776C-0.110354 0.516283 -0.110354 1.0138 0.221686 1.31231C0.221686 1.31231 0.221686 1.31229 0.277026 1.36204L4.42752 4.79488C4.59354 4.89438 4.8149 4.9939 5.03626 4.9939Z"
+                  fill="#333333" />
+              </svg></a>
+          </div>
+          <div class="accordion__content">Да, вы можете погасить кредит досрочно. Более того, чем
+            раньше вы погашаете кредит, тем меньше Вам придется платить процентов за пользование им.
+            Вы можете увидеть сумму фактической задолженности по процентам и кредиту по состоянию на
+            любой день в Личном Кабинете.</div>
+        </div>
+        <div class="accordion__item">
+          <div class="accordion__title">
+            <a href="#">Коли можна подати повторну заявку після отримання відмови?<svg width="10" height="5"
+                viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.03626 4.9939C5.25762 4.9939 5.42364 4.89438 5.58966 4.79488L9.68481 1.36204C10.0169 1.06354 10.0722 0.615803 9.79549 0.267546C9.46345 -0.0309608 8.96539 -0.080718 8.57801 0.168037C8.57801 0.168037 8.57801 0.168025 8.52267 0.217776L4.98092 3.1531L1.43916 0.217776C1.10712 -0.0807301 0.553725 -0.0807301 0.221686 0.217776C-0.110354 0.516283 -0.110354 1.0138 0.221686 1.31231C0.221686 1.31231 0.221686 1.31229 0.277026 1.36204L4.42752 4.79488C4.59354 4.89438 4.8149 4.9939 5.03626 4.9939Z"
+                  fill="#333333" />
+              </svg></a>
+          </div>
+          <div class="accordion__content">Да, вы можете погасить кредит досрочно. Более того, чем
+            раньше вы погашаете кредит, тем меньше Вам придется платить процентов за пользование им.
+            Вы можете увидеть сумму фактической задолженности по процентам и кредиту по состоянию на
+            любой день в Личном Кабинете.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="repay">
+  <div class="container">
+    <h2 class="repay__title section-title">оплачуй зручно</h2>
+    <div class="repay__inner">
+      <div class="repay__item">
+        <div class="repay__item-wrapper">
+          <div class="repay__item-content">
+            <div class="repay__item-title">Картою</div>
+            <div class="repay__item-text">Ти можеш погасити кредит онлайн не виходячи з дому.
+              Просто перейди в Особистий кабінет і оплати його банківською карткою.</div>
+            <div class="repay__item-icon">
+              <a href="#">
+                <img src="img/repay/visa.svg" alt="">
+              </a>
+              <a href="#">
+                <img src="img/repay/mastercard.svg" alt="">
+              </a>
+              <a href="#">
+                <img src="img/repay/prostir.svg" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="repay__item-images">
+            <img src="img/repay/macbook.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="repay__item">
+        <div class="repay__item-wrapper">
+          <div class="repay__item-content">
+            <div class="repay__item-title">готівкою</div>
+            <div class="repay__item-text">Оплата кредиту в терміналі-
+              це швидко і зручно.
+              Ти зможеш знайти термінал в найближчих супермаркетах.</div>
+            <!-- <div class="repay__item-icon">
+                <a href="#">
+                  <img src="img/city.png" alt="">
+                </a>
+                <a href="#">
+                  <img src="img/ibox.png" alt="">
+                </a>
+                <a href="#">
+                  <img src="img/easypay.png" alt="">
+                </a>
+              </div> -->
+          </div>
+          <div class="repay__item-images">
+            <img src="img/repay/Mask.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="rates-doc">
+  <div class="container">
+    <h3 class="rates-doc__title section-title">Тарифи та документи</h3>
+    <div class="rates-doc__wrapper">
+      <div class="rates-doc__tabs aside-tabs">
+        <a href="#" class="aside-tabs__item active">Інформація для споживача</a>
+        <a href="#" class="aside-tabs__item">Тарифи</a>
+        <a href="#" class="aside-tabs__item">Форми договорів</a>
+        <a href="#" class="aside-tabs__item">Статутні документи</a>
+      </div>
+      <div class="rates-doc__inner">
+        <div class="rates-doc__body show">
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Форми договорів корпоративного бізнесу</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Форми договорів для МСБ</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Документи та форми договорів для тебе</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Архів</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rates-doc__body">
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Форми договорів корпоративного бізнесу</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Форми договорів для МСБ</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Документи та форми договорів для тебе</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Архів</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rates-doc__body">
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Форми договорів корпоративного бізнесу</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Форми договорів для МСБ</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Документи та форми договорів для тебе</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Архів</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rates-doc__body">
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Форми договорів корпоративного бізнесу</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Форми договорів для МСБ</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Документи та форми договорів для тебе</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="rates-doc__item">
+            <div class="rates-doc__icon">
+              <img src="img/icon/pdf-icon.svg" alt="pdf">
+            </div>
+            <div class="rates-doc__content">
+              <div class="rates-doc__name">Архів</div>
+              <div class="rates-doc__handle">
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/eye.svg" alt="eye">
+                  </div>
+                  <span class="rates-doc__link-text">Переглянути</span>
+                </a>
+                <a href="#" class="rates-doc__link">
+                  <div class="rates-doc__link-icon">
+                    <img src="img/icon/pdf-icon.svg" alt="pdf">
+                  </div>
+                  <span class="rates-doc__link-text">Завантажити</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <section class="form-questions">
+  <div class="container">
+    <div class="form-questions__wrapper">
+      <div class="form-questions__form">
+        <form action="#">
+          <h3 class="form-questions__title section-title">У вас залишились питання?</h3>
+          <div class="form-questions__info">Напишіть нам і ми зв'яжемося з вами протягом 30 хвилин</div>
+          <div class="form-questions__inner">
+            <div class="form-questions__body">
+              <div class="input-block form-questions__input">
+                <div class="input-block__label">Ваше им’я</div>
+                <div class="input-block__input">
+                  <input name="name" type="text">
+                </div>
+              </div>
+              <div class="input-block form-questions__input">
+                <div class="input-block__label">Особистий телефон</div>
+                <div class="input-block__input">
+                  <input name="phone" type="text">
+                </div>
+              </div>
+              <button type="submit" class="form-questions__btn btn">Відправити повідомлення</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="form-questions__img">
+        <img src="img/question-img.png" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo logo">
+        <img src="img/logo-white.svg" alt="">
+      </div>
+    </div>
+    <div class="footer__wrapper">
+      <div class="footer-col footer-phone">
+        <div class="footer-col__top">
+          <div class="footer-col__label">Служба підтримки 24/7</div>
+          <div class="footer-col__phone">
+            <a href="#" class="footer-col__link phone-link">
+              0 800 987 654 321
+            </a>
+            <div class="footer-col__phone-info">дзвінки з мобільних та стаціонарних телефонів безкоштовні
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col footer-accord footer-accord__opened">
+        <div class="footer-col__label">Кредитування</div>
+        <ul class="footer-col__list">
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Як отримати кредит</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Усе про кредити</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Як погасити кредит</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col footer-company footer-accord footer-accord__opened">
+        <div class="footer-col__label">Компанія</div>
+        <ul class="footer-col__list">
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">О компанії</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Правова інформація</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Акції</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Новини</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col footer-app">
+        <div class="footer-col__label">Наш додаток</div>
+        <div class="footer-col__app-links">
+          <a href="#" class="app-links__link">
+            <img src="img/icon/app-store.svg" alt="AppStore">
+          </a>
+          <a href="#" class="app-links__link">
+            <img src="img/icon/google-play.svg" alt="GooglePlay">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col footer-col_social">
+        <div class="footer-col__label">Ми у соціальних мережах</div>
+
+        <div class="footer-social">
+          <a href="" class="footer-social__link">
+            <img src="img/icon/fb.svg" alt="">
+          </a>
+          <a href="" class="footer-social__link">
+            <img src="img/icon/telegram.svg" alt="">
+          </a>
+          <a href="" class="footer-social__link">
+            <img src="img/icon/wp.svg" alt="">
+          </a>
+          <a href="" class="footer-social__link">
+            <img src="img/icon/instagram.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <div class="footer-copy__text">Мінімальна сума кредиту становить 1 000 грн, максимальна сума кредиту – 500 000
+        грн. Мінімальний строк кредиту – 6 місяців, максимальний – 60 місяців. Реальна річна процентна ставка залежить
+        від розміру й строку кредиту та може складати від 68,26% до 231,24% річних. Детальна інформація на tascombank.ua
+        або за номером телефону 0 800 503 580, цілодобово (дзвінки з номерів національних операторів на території
+        України безкоштовно). Тільки для повнолітіх.
+      </div>
+      <div class="footer-copy__info">
+        <span>2019 © TASCOMBANK.UA</span>
+        <span>ЛІЦЕНЗІЯ НБУ №84 ВІД 25.10.2011</span>
+      </div>
+    </div>
+  </div>
+</footer>
+    <div class="popups">
+  <div class="popups__inner">
+
+    <div id="popup__sorry" class="popup__congr popup">
+      <div class="popup__content">
+        <div class="popup__title">Як прикро</div>
+        <div class="sent__text popup__text">На жаль, ми не можемо надати Вам кредит.
+          Але Ви можете спробувати подати заявку ще раз за 30 днів
+        </div>
+        <a href="#" class="popup-btn btn  btn-bg">
+          Повернутися на головну
+        </a>
+      </div>
+      <a href="#" class="popup__exit js-close-popup">
+        <img src="img//icon/close.svg" alt="">
+      </a>
+    </div>
+    <div id="popup__congr" class="popup__sorry popup">
+      <div class="popup__content">
+        <div class="popup__title">Чудова новина!</div>
+        <div class="sent__text popup__text">Ваш кредит схвалений!</div>
+        <a href="#" class="popup-btn btn  btn-bg">
+          Продовжити
+        </a>
+        <div class="login__register">
+          <a href="#" class="login__regist btn-str">Відмовитися</a>
+        </div>
+      </div>
+      <a href="#" class="popup__exit js-close-popup">
+        <img src="img//icon/close.svg" alt="">
+      </a>
+    </div>
+    <div id="popup__login" class="popup__login popup">
+      <div class="login__inner">
+        <div class="form__label popup__title">получити кредит</div>
+        <div class="sent__text popup__text">Щоб отримати кредит, заповніть коротку форму</div>
+        <form class="login__form">
+          <div class="login__form-item">
+            <label>Особистий телефон</label>
+            <input name="phone" type="text">
+          </div>
+          <div class="login__form-item">
+            <label>Ім’я</label>
+            <input name="name" type="text">
+          </div>
+          <div class="login__form-item">
+            <label>ІПН</label>
+            <input name="name" type="text">
+          </div>
+          <label class="control control-checkbox">
+            <div class="contol-group__text">Дозволяю обробку персональних даних згідно <a href="#"
+                class="blue-link">Умов Банку</a> та погоджуюсь з умовами оформлення заявки</div>
+            <input type="checkbox" name="checkbox" checked />
+            <div class="control_indicator"></div>
+          </label>
+          <a href="#" class="popup-btn btn">Отримати кредит</a>
+          <div class="login__register">
+            <a href="#" class="login__regist btn-str">Повернутися на головну</a>
+          </div>
+        </form>
+      </div>
+      <a href="#" class="popup__exit js-close-popup">
+        <img src="img//icon/close.svg" alt="">
+      </a>
+    </div>
+    <div id="wait" class="popup">
+      <div class="popup__content">
+        <div class="preloader">
+          <img src="img/loading.svg" alt="">
+        </div>
+        <div class="popup__title">Вітаємо!</div>
+        <div class="popup__text">Договір підписано! Виконується перерахунок кредитних коштів на картку
+          <b>[42ХХ ХХХХ ХХХХ 1234]</b>.
+          Це не займе багато часу.</div>
+        <a href="#" class="popup-btn btn">Перейти в кабінет</a>
+      </div>
+    </div>
+    <div id="loading" class="popup">
+      <div class="popup__content">
+        <div class="preloader">
+          <img src="img/loading.svg" alt="">
+        </div>
+        <div class="popup__title">Трохи терпіння</div>
+        <div class="popup__text">Перевіряємо інформацію</div>
+      </div>
+    </div>
+    <div id="loading_2" class="popup">
+      <div class="popup__content">
+        <div class="preloader">
+          <img src="img/loading.svg" alt="">
+        </div>
+        <div class="popup__title">відправка даних</div>
+        <div class="popup__text">Ми не змусимо вас довго чекати, це займе лише кілька хвилин</div>
+        <div class="login__register">
+          <a href="#" class="login__regist btn-str">Відмовитися</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/vendor.js"></script>
+<script src="js/script.js"></script>
+    <script src="js/calc.js"></script>
+    <script src="js/questions.js"></script>
+    <script src="js/rate-doc.js"></script>
+    <script src="js/form-question.js"></script>
+</body>
+
+</html>

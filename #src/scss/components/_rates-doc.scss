@@ -1,0 +1,146 @@
+.rates-doc {
+  padding: 42px 0 50px;
+
+  @media(max-width: $md3) {
+    padding: 78px 0 50px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+
+    @media(max-width: $md3) {
+      display: block;
+    }
+  }
+
+  &__tabs {
+    max-width: 457px;
+    width: 100%;
+    margin-right: 12%;
+
+    @media(max-width: $md3) {
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__inner {
+    max-width: 423px;
+    width: 100%;
+
+    @media(max-width: $md3) {
+      max-width: 100%;
+    }
+  }
+
+  &__body {
+    display: none;
+
+    @media(max-width: $md3) {
+      padding-left: 12px;
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__item {
+    font-family: 'Verdana', sans-serif;
+    display: flex;
+    align-items: flex-start;
+
+    &:not(:last-child) {
+      margin-bottom: 39px;
+    }
+  }
+
+  &__icon {
+    margin-right: 20px;
+
+    @media(max-width: $md4) {
+      margin-right: 15px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__name {
+    margin-bottom: 19px;
+
+    @media(max-width: $md4) {
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__handle {
+    display: flex;
+
+    @media(max-width: $md3) {
+      justify-content: space-between;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  &__link-icon {
+    max-width: 20px;
+    margin-right: 4px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__link-text {
+    font-size: 12px;
+    text-decoration: underline;
+  }
+}
+
+.aside-tabs {
+  font-family: 'Verdana', sans-serif;
+
+  &__item {
+    padding: 19px 35px;
+    background: #fff;
+    display: block;
+    border: 1px solid #E7E7E7;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all ease .2s;
+
+    @media(max-width: $md4) {
+      padding: 19px 5px 19px 35px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &.active {
+      font-weight: bold;
+      background: linear-gradient(115.71deg, #EFF3FF 17.28%, #EFFFF8 104.92%);
+    }
+  }
+}
+
+.active {}

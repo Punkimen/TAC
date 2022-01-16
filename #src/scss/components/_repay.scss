@@ -1,0 +1,111 @@
+.repay {
+  padding: 130px 0 90px;
+  position: relative;
+
+  @media(max-width: $md3) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+  }
+}
+
+.repay__inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+
+  @media(max-width: $md2) {
+    display: block;
+  }
+}
+
+.repay__item {
+  max-width: 555px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #EAECF0;
+  box-shadow: 0px 0px 20px rgba(72, 0, 1, 0.2);
+  border-radius: 16px;
+  padding: 0px 0px 0px 40px;
+
+  @media(max-width: $md2) {
+    max-width: 100%;
+  }
+
+  @media(max-width: $md5) {
+    padding: 20px;
+  }
+}
+
+.repay__item+.repay__item {
+  margin-left: 10px;
+
+  @media(max-width: $md2) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
+.repay__link {
+  display: block;
+  color: #333
+}
+
+.repay__item-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.repay__item-content {
+  max-width: 255px;
+  margin-right: auto;
+}
+
+.repay__item-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  font-family: 'Verdana', sans-serif;
+  margin-bottom: 16px;
+}
+
+.repay__item:first-child .repay__item-images {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.repay__item-images {
+  height: 100%;
+
+  @media(max-width: $md5) {
+    display: none;
+  }
+}
+
+.repay__item-images img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+}
+
+.repay__item-text {
+  font-size: 16px;
+  padding-bottom: 40px;
+}
+
+.repay__item-icon {
+  display: flex;
+  align-items: center;
+}
+
+.repay__item-icon img {
+  display: block;
+  margin-right: 20px;
+}

@@ -1,0 +1,107 @@
+<section class="credits">
+  <div class="container credits-container">
+    <div class="credits__wrapper">
+      <div class="credits__content">
+        <div class="credits__title">
+          кредит до 500 000 грн
+        </div>
+        <div class="credits__text">
+          <p>Отримайте кредит на картку без надання додаткових документів, посвідчень та довідок до 50 000 грн</p>
+        </div>
+        <div class="credits__info">*якщо кредит більше ніж 50 000 грн, потрібна довідка про доходи</div>
+      </div>
+      <div class="credits__calc">
+        <div class="credits__calc-wrap">
+          <div class="wrap__content">
+            <div class="credits__calc-left">
+              <div class="credits__calc-header">
+                <div class="credits__calc-title">Параметри кредиту</div>
+              </div>
+              <div class="сalc__info">
+                <div class="range clearfix">
+                  <div class="range__up">
+                    <div class="info__label">Сума кредиту</div>
+                    <div class="info__inp">
+                      <div class="info__inp-btn sum_minus">
+                        <span></span>
+                      </div>
+                      <input type="text" class="text summ" id="summ" name="s" value="8000" data-max="10000"
+                        data-min="1000" data-step="500" data-k="1" multiple>
+                      <div class="info__inp-btn sum_plus">
+                        <span></span>
+                        <span class="up"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider"></div>
+                </div>
+                <div class="сalc__quantity">
+                  <div class="quantity__left">
+                    1000 <span>грн</span>
+                  </div>
+                  <div class="quantity__right">
+                    10 000 <span>грн</span>
+                  </div>
+                </div>
+              </div>
+              <div class="сalc__info">
+                <div class="range clearfix">
+                  <div class="range__up range__up--term">
+                    <div class="info__label">Строк кредиту</div>
+                    <div class="info__inp">
+                      <div class="info__inp-btn date_minus">
+                        <span></span>
+                      </div>
+                      <input type="text" class="text term" id="term" name="s" value="20" data-max="36" data-min="3"
+                        data-min-event="0" data-step="1" data-k="1">
+                      <div class="info__inp-btn date_plus">
+                        <span></span>
+                        <span class="up"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider">
+                  </div>
+                </div>
+                <div class="сalc__quantity">
+                  <div class="quantity__left">
+                    3 <span>месяца</span>
+                  </div>
+                  <div class="quantity__right">
+                    36 <span>месяцев</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="credits__calc-right">
+              <div class="calc__calculation">
+                <div class="calculation__return calculation__content calculation__content--bg">
+                  <div class="return__label label">*Щомісячний платіж</div>
+                  <div class="return__sum calculation__sum">
+                    <span id="return__sum">
+                      8 055
+                    </span>
+                    <span> грн</span>
+                  </div>
+                </div>
+                <div class="calc__calculation-info">* Розрахунок, що проводиться, приблизний. Точніші дані Ви можете
+                  уточнити у нашого співробітника банку</div>
+                <div class="calculation__quantity calculation__content" style="display: none;">
+                  <div class="date__label label">Количество платежей</div>
+                  <div id="quantity__sum" class="quantity__sum calculation__sum">
+                    12
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="credits__calc-button">
+              <button class="credits__calc-btn btn" data-popup="#popup__login">
+                Повернутися на головну
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
