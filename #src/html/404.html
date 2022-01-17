@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    @@include('components/_styles.html')
+</head>
+
+<body>
+    <div class="page-content">
+        <main class="main-page">
+            @@include('components/_header.html')
+            <section class="banner">
+                <div class="container">
+                    <h2 class="banner__title section-title">Щось пішло не так!</h2>
+                    <div class="banner__text">
+                        <p>Поверніться на головну сторінку:</p>
+                    </div>
+                </div>
+            </section>
+            @@include('components/_404.html')
+
+        </main>
+
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_popups.html')
+
+
+
+    @@include('components/_scripts.html')
+
+</body>
+
+</html>

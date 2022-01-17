@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anketa</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  @@include('components/_styles.html')
+</head>
+
+<body>
+  <div class="page-content">
+    <main class="main-page">
+      @@include('components/_header.html')
+      @@include('components/_section-banner_steps.html')
+      <section class="registration">
+        <div class="container">
+          <form id="step_1" action="#"></form>
+          <div class="registration__block">
+            <h4 class="registration__title section-title">Про себе</h4>
+            <div class="registration__wrapper">
+              <div class="registration-item">
+                <div class="registration-item__label">Особисті данні</div>
+                <div class="registration-item__body">
+                  <div class="input-block select">
+                    <div class="input-block__label">Стать</div>
+                    <select name="gender">
+                      <option value="" hidden disabled selected>Виберіть
+                      </option>
+                      <option>муж</option>
+                      <option>жінка</option>
+                    </select>
+                    <div class="select_arrow">
+                    </div>
+                  </div>
+                  <div class="input-block">
+                    <div class="input-block__label">Прізвище</div>
+                    <div class="input-block__input">
+                      <input name="surname" type="text" placeholder="Введіть">
+                    </div>
+                  </div>
+                  <div class="input-block">
+                    <div class="input-block__label">Ваше им’я</div>
+                    <div class="input-block__input">
+                      <input name="name" type="text" placeholder="Введіть">
+                    </div>
+                  </div>
+                  <div class="input-block">
+                    <div class="input-block__label">По батькові</div>
+                    <div class="input-block__input">
+                      <input name="fatherName" type="text" placeholder="Введіть">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="registration-item">
+                <div class="registration-item__label">Контактні дані</div>
+                <div class="registration-item__body">
+                  <div class="input-block">
+                    <div class="input-block__label">Мобільний телефон</div>
+                    <div class="input-block__input">
+                      <input name="phone" type="text" placeholder="+380">
+                    </div>
+                  </div>
+                  <div class="input-block">
+                    <div class="input-block__label">ІПН</div>
+                    <div class="input-block__input">
+                      <input name="ipn" type="text" placeholder="Введіть">
+                    </div>
+                  </div>
+                  <div class="input-block">
+                    <div class="input-block__label">Дата народження</div>
+                    <div class="input-block__input">
+                      <input name="born-date" type="date" placeholder="Введіть">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="registration__block">
+            <label class="control control-checkbox">
+              <div class="contol-group__text">Чи належите Ви до політично значущих осіб, членів їх сім’ї або осіб,
+                пов’язаних з політично значущою особою?</div>
+              <input type="checkbox" name="checkbox" checked />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              <div class="contol-group__text">Наявність громадянства США або Green Card</div>
+              <input type="checkbox" name="checkbox" checked />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              <div class="contol-group__text">Я є податковим резидентом США</div>
+              <input type="checkbox" name="checkbox" checked />
+              <div class="control_indicator"></div>
+            </label>
+          </div>
+          <div class="registration__btns">
+            <a href="#" class="registration__next-btn btn">Продовжити</a>
+            <a href="#" class="registration__back-btn grey-link">Повернутися назад</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    @@include('components/_footer.html')
+  </div>
+  @@include('components/_popups.html')
+
+
+
+  @@include('components/_scripts.html')
+
+</body>
+
+</html>

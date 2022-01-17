@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anketa</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/vendor/jquery-ui.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="page-content">
+    <main class="main-page">
+      <header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <div class="header__burger">
+        <div class="burger__icon icon-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="header__logo">
+        <img src="img/logo.svg" alt="logo">
+      </div>
+      <nav class="header__nav nunito">
+        <ul class="header__list">
+          <li class="header__list-elem active">
+            <a href="#" class="header__link">Як отримати кредит</a>
+          </li>
+          <li class="header__list-elem">
+            <a href="#" class="header__link">Чому ми?</a>
+          </li>
+          <li class="header__list-elem">
+            <a href="#" class="header__link">Мобильний додаток</a>
+          </li>
+          <li class="header__list-elem">
+            <a href="#" class="header__link">Питання</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__call">
+        <button class="header__call-btn btn btn-transparent">
+          <span>Дзвінок</span>
+          <img src="img/icon/phone-call.svg" alt="" class="header__call-icon">
+        </button>
+        <div class="header__call-service">
+          <div class="header__call-label">Служба підтримки 24/7</div>
+          <a href="tel:0800987765876" class="header__call-phone">0 800 987 765 876</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <div class="container mobile-menu__container">
+      <div class="header__call-service header__call-service_mob">
+        <div class="header__call-label">Служба підтримки 24/7</div>
+        <a href="tel:0800987765876" class="header__call-phone">0 800 987 765 876</a>
+      </div>
+    </div>
+  </div>
+</header>
+      <section class="banner">
+  <div class="container">
+    <h2 class="banner__title section-title">Крок <span class="step-count">1</span> из 4</h2>
+    <div class="banner__subtitle">
+      Для оформлення кредиту заповніть дані
+    </div>
+  </div>
+</section>
+      <section class="registration">
+        <div class="container">
+          <form id="step_3" action="#"></form>
+          <div class="registration__block">
+            <h4 class="registration__title section-title">Данні про роботу</h4>
+            <div class="registration__wrapper">
+              <div class="registration-item">
+                <div class="registration-item__label">Данні про роботу</div>
+                <div class="passport-type">
+                  <div class="passport-type__label">СПД</div>
+                  <div class="passport-type__inner">
+                    <label class="control control-radio">
+                      Ні
+                      <input type="radio" name="radio" value="passport" />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      Так
+                      <input type="radio" name="radio" checked />
+                      <div class="control_indicator"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="registration-item__body">
+                  <div class="input-block select">
+                    <div class="input-block__label">Вид підприємницької діяльності</div>
+                    <select name="work-type">
+                      <option value="" hidden disabled selected>Виберіть
+                      </option>
+                      <option>work</option>
+                      <option>work</option>
+                    </select>
+                    <div class="select_arrow">
+                    </div>
+                  </div>
+                  <div class="input-block">
+                    <div class="input-block__label">Назва огранізації</div>
+                    <div class="input-block__input">
+                      <input name="company-name" type="text" placeholder="Введіть">
+                    </div>
+                  </div>
+                  <div class="registration__inputs-row">
+                    <div class="input-block">
+                      <div class="input-block__label">Стаж роботи</div>
+                      <div class="input-block__input">
+                        <input name="work-experience" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Телефон робочій</div>
+                      <div class="input-block__input">
+                        <input name="work-phone" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="registration-item">
+
+                <div class="radio-choose">
+                  <div class="registration-item__label">Транспортні засоби</div>
+                  <div class="radio-choose__inner">
+                    <label class="control control-radio">
+                      Ні
+                      <input type="radio" name="transport" checked />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      Так
+                      <input type="radio" name="transport" />
+                      <div class="control_indicator"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="radio-choose">
+                  <div class="registration-item__label">Депозити</div>
+                  <div class="radio-choose__inner">
+                    <label class="control control-radio">
+                      Ні
+                      <input type="radio" name="deposits" checked />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      Так
+                      <input type="radio" name="deposits" />
+                      <div class="control_indicator"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="radio-choose">
+                  <div class="registration-item__label">Нерухомість</div>
+                  <div class="radio-choose__inner">
+                    <label class="control control-radio">
+                      Ні
+                      <input type="radio" name="estate" checked />
+                      <div class="control_indicator"></div>
+                    </label>
+                    <label class="control control-radio">
+                      Так
+                      <input type="radio" name="estate" />
+                      <div class="control_indicator"></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="checkboxes-wrapper">
+                  <label class="control control-checkbox">
+                    <div class="contol-group__text">Квартира</div>
+                    <input type="checkbox" name="checkbox" checked />
+                    <div class="control_indicator"></div>
+                  </label>
+                  <label class="control control-checkbox">
+                    <div class="contol-group__text">Земельна ділянка</div>
+                    <input type="checkbox" name="checkbox" checked />
+                    <div class="control_indicator"></div>
+                  </label>
+                  <label class="control control-checkbox">
+                    <div class="contol-group__text">Будинок житлового типу</div>
+                    <input type="checkbox" name="checkbox" checked />
+                    <div class="control_indicator"></div>
+                  </label>
+                  <label class="control control-checkbox">
+                    <div class="contol-group__text">Комерційна нерухомість</div>
+                    <input type="checkbox" name="checkbox" checked />
+                    <div class="control_indicator"></div>
+                  </label>
+                  <label class="control control-checkbox">
+                    <div class="contol-group__text">Будинок дачного типу</div>
+                    <input type="checkbox" name="checkbox" checked />
+                    <div class="control_indicator"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="registration-item registration-item_big">
+                <div class="registration-item__wrapper">
+                  <div class="registration-item__wrapper-item">
+                    <div class="registration-item__label">Доходи</div>
+                    <div class="registration__inputs-row">
+                      <div class="input-block">
+                        <div class="input-block__label">Бажана сумма кредиту</div>
+                        <div class="input-block__input">
+                          <input name="encome" type="text" placeholder="Введіть">
+                        </div>
+                      </div>
+                      <div class="input-block">
+                        <div class="input-block__label">Термін звітнього періоду (міс)</div>
+                        <div class="input-block__input">
+                          <input name="mounth-encome" type="text" placeholder="Введіть">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="registration__inputs-row">
+                      <div class="input-block">
+                        <div class="input-block__label">Валовий дохід СПД</div>
+                        <div class="input-block__input">
+                          <input name="spd-encome" type="text" placeholder="Введіть">
+                        </div>
+                      </div>
+                      <div class="input-block">
+                        <div class="input-block__label">Заявлений дохід СПД</div>
+                        <div class="input-block__input">
+                          <input name="declared-income" type="text" placeholder="Введіть">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="registration-item__wrapper-item">
+                    <div class="registration-item__label">Інші доходи</div>
+                    <div class="radio-choose">
+                      <div class="radio-choose__inner">
+                        <label class="control control-radio">
+                          Ні
+                          <input type="radio" name="others-estate" value="passport" checked />
+                          <div class="control_indicator"></div>
+                        </label>
+                        <label class="control control-radio">
+                          Так
+                          <input type="radio" name="others-estate" />
+                          <div class="control_indicator"></div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="checkboxes-wrapper">
+                      <label class="control control-checkbox">
+                        <div class="contol-group__text">Офіційно</div>
+                        <input type="radio" name="checkbox" checked />
+                        <div class="control_indicator"></div>
+                      </label>
+                      <label class="control control-checkbox">
+                        <div class="contol-group__text">Неофіційно</div>
+                        <input type="radio" name="checkbox" checked />
+                        <div class="control_indicator"></div>
+                      </label>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="registration__btns">
+            <a href="#" class="registration__next-btn btn">Продовжити</a>
+            <a href="#" class="registration__back-btn grey-link">Повернутися назад</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo logo">
+        <img src="img/logo-white.svg" alt="">
+      </div>
+    </div>
+    <div class="footer__wrapper">
+      <div class="footer-col footer-phone">
+        <div class="footer-col__top">
+          <div class="footer-col__label">Служба підтримки 24/7</div>
+          <div class="footer-col__phone">
+            <a href="#" class="footer-col__link phone-link">
+              0 800 987 654 321
+            </a>
+            <div class="footer-col__phone-info">дзвінки з мобільних та стаціонарних телефонів безкоштовні
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-col footer-accord footer-accord__opened">
+        <div class="footer-col__label">Кредитування</div>
+        <ul class="footer-col__list">
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Як отримати кредит</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Усе про кредити</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Як погасити кредит</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col footer-company footer-accord footer-accord__opened">
+        <div class="footer-col__label">Компанія</div>
+        <ul class="footer-col__list">
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">О компанії</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Правова інформація</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Акції</a>
+          </li>
+          <li class="footer-col__elem">
+            <a href="#" class="footer-col__link">Новини</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-col footer-app">
+        <div class="footer-col__label">Наш додаток</div>
+        <div class="footer-col__app-links">
+          <a href="#" class="app-links__link">
+            <img src="img/icon/app-store.svg" alt="AppStore">
+          </a>
+          <a href="#" class="app-links__link">
+            <img src="img/icon/google-play.svg" alt="GooglePlay">
+          </a>
+        </div>
+      </div>
+      <div class="footer-col footer-col_social">
+        <div class="footer-col__label">Ми у соціальних мережах</div>
+
+        <div class="footer-social">
+          <a href="" class="footer-social__link">
+            <img src="img/icon/fb.svg" alt="">
+          </a>
+          <a href="" class="footer-social__link">
+            <img src="img/icon/telegram.svg" alt="">
+          </a>
+          <a href="" class="footer-social__link">
+            <img src="img/icon/wp.svg" alt="">
+          </a>
+          <a href="" class="footer-social__link">
+            <img src="img/icon/instagram.svg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <div class="footer-copy__text">Мінімальна сума кредиту становить 1 000 грн, максимальна сума кредиту – 500 000
+        грн. Мінімальний строк кредиту – 6 місяців, максимальний – 60 місяців. Реальна річна процентна ставка залежить
+        від розміру й строку кредиту та може складати від 68,26% до 231,24% річних. Детальна інформація на tascombank.ua
+        або за номером телефону 0 800 503 580, цілодобово (дзвінки з номерів національних операторів на території
+        України безкоштовно). Тільки для повнолітіх.
+      </div>
+      <div class="footer-copy__info">
+        <span>2019 © TASCOMBANK.UA</span>
+        <span>ЛІЦЕНЗІЯ НБУ №84 ВІД 25.10.2011</span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+  <div class="popups">
+  <div class="popups__inner">
+
+    <div id="popup__sorry" class="popup__congr popup">
+      <div class="popup__content">
+        <div class="popup__title">Як прикро</div>
+        <div class="sent__text popup__text">На жаль, ми не можемо надати Вам кредит.
+          Але Ви можете спробувати подати заявку ще раз за 30 днів
+        </div>
+        <a href="#" class="popup-btn btn  btn-bg">
+          Повернутися на головну
+        </a>
+      </div>
+      <a href="#" class="popup__exit js-close-popup">
+        <img src="img//icon/close.svg" alt="">
+      </a>
+    </div>
+    <div id="popup__congr" class="popup__sorry popup">
+      <div class="popup__content">
+        <div class="popup__title">Чудова новина!</div>
+        <div class="sent__text popup__text">Ваш кредит схвалений!</div>
+        <a href="#" class="popup-btn btn  btn-bg">
+          Продовжити
+        </a>
+        <div class="login__register">
+          <a href="#" class="login__regist btn-str">Відмовитися</a>
+        </div>
+      </div>
+      <a href="#" class="popup__exit js-close-popup">
+        <img src="img//icon/close.svg" alt="">
+      </a>
+    </div>
+    <div id="popup__login" class="popup__login popup">
+      <div class="login__inner">
+        <div class="form__label popup__title">получити кредит</div>
+        <div class="sent__text popup__text">Щоб отримати кредит, заповніть коротку форму</div>
+        <form class="login__form">
+          <div class="login__form-item">
+            <label>Особистий телефон</label>
+            <input name="phone" type="text">
+          </div>
+          <div class="login__form-item">
+            <label>Ім’я</label>
+            <input name="name" type="text">
+          </div>
+          <div class="login__form-item">
+            <label>ІПН</label>
+            <input name="name" type="text">
+          </div>
+          <label class="control control-checkbox">
+            <div class="contol-group__text">Дозволяю обробку персональних даних згідно <a href="#"
+                class="blue-link">Умов Банку</a> та погоджуюсь з умовами оформлення заявки</div>
+            <input type="checkbox" name="checkbox" checked />
+            <div class="control_indicator"></div>
+          </label>
+          <a href="#" class="popup-btn btn">Отримати кредит</a>
+          <div class="login__register">
+            <a href="#" class="login__regist btn-str">Повернутися на головну</a>
+          </div>
+        </form>
+      </div>
+      <a href="#" class="popup__exit js-close-popup">
+        <img src="img//icon/close.svg" alt="">
+      </a>
+    </div>
+    <div id="wait" class="popup">
+      <div class="popup__content">
+        <div class="preloader">
+          <img src="img/loading.svg" alt="">
+        </div>
+        <div class="popup__title">Вітаємо!</div>
+        <div class="popup__text">Договір підписано! Виконується перерахунок кредитних коштів на картку
+          <b>[42ХХ ХХХХ ХХХХ 1234]</b>.
+          Це не займе багато часу.</div>
+        <a href="#" class="popup-btn btn">Перейти в кабінет</a>
+      </div>
+    </div>
+    <div id="loading" class="popup">
+      <div class="popup__content">
+        <div class="preloader">
+          <img src="img/loading.svg" alt="">
+        </div>
+        <div class="popup__title">Трохи терпіння</div>
+        <div class="popup__text">Перевіряємо інформацію</div>
+      </div>
+    </div>
+    <div id="loading_2" class="popup">
+      <div class="popup__content">
+        <div class="preloader">
+          <img src="img/loading.svg" alt="">
+        </div>
+        <div class="popup__title">відправка даних</div>
+        <div class="popup__text">Ми не змусимо вас довго чекати, це займе лише кілька хвилин</div>
+        <div class="login__register">
+          <a href="#" class="login__regist btn-str">Відмовитися</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/vendor.js"></script>
+<script src="js/script.js"></script>
+  <script src="js/registration.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anketa</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  @@include('components/_styles.html')
+</head>
+
+<body>
+  <div class="page-content">
+    <main class="main-page">
+      @@include('components/_header.html')
+      @@include('components/_section-banner_steps.html')
+      <section class="registration">
+        <div class="container">
+          <form id="step_2" action="#"></form>
+          <div class="registration__block">
+            <h4 class="registration__title section-title">Паспортні дані</h4>
+            <div class="registration__wrapper">
+              <div class="registration-item registration-item_unbordered">
+                <div class="registration-item_unbordered-body">
+                  <div class="registration-item__label">Паспортні дані</div>
+                  <div class="passport-type">
+                    <div class="passport-type__label"></div>
+                    <div class="passport-type__inner">
+                      <label class="control control-radio">
+                        Книжка
+                        <input class="passport-type__input" id="radio_passport" type="radio" name="radio"
+                          value="passport" checked="checked" />
+                        <div class="control_indicator"></div>
+                      </label>
+                      <label class="control control-radio">
+                        ID-карта
+                        <input class="passport-type__input" id="radio_idCard" value="idCard" type="radio"
+                          name="radio" />
+                        <div class="control_indicator"></div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="registration-item__body passport-type__body show">
+                    <div class="registration__inputs-row">
+                      <div class="input-block">
+                        <div class="input-block__label">Запис</div>
+                        <div class="input-block__input">
+                          <input name="recording" type="text" placeholder="XX">
+                        </div>
+                      </div>
+                      <div class="input-block">
+                        <div class="input-block__label">Документ</div>
+                        <div class="input-block__input">
+                          <input name="document" type="text" placeholder="XXXXXX">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Дата закінчення строку дії</div>
+                      <div class="input-block__input">
+                        <input name="ending-date" type="date" placeholder="Введіть">
+                      </div>
+                    </div>
+
+                    <div class="input-block">
+                      <div class="input-block__label">Ким виданий</div>
+                      <div class="input-block__input">
+                        <input name="issued" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Дата видачі</div>
+                      <div class="input-block__input">
+                        <input name="get-date" type="date" placeholder="Введіть">
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="registration-item__body passport-type__body">
+                    <div class="input-block">
+                      <div class="input-block__label">id</div>
+                      <div class="input-block__input">
+                        <input name="card-id" type="text" placeholder="XX">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Дата закінчення строку дії</div>
+                      <div class="input-block__input">
+                        <input name="ending-date" type="date" placeholder="Введіть">
+                      </div>
+                    </div>
+
+                    <div class="input-block">
+                      <div class="input-block__label">Ким виданий</div>
+                      <div class="input-block__input">
+                        <input name="issued" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Дата видачі</div>
+                      <div class="input-block__input">
+                        <input name="get-date" type="date" placeholder="Введіть">
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="adress-switch">
+                  <div class="adress-switch__label">Адреса проживання</div>
+                  <div class="costumn-switch">
+                    <div class="costumn-switch__label">Співпадає з адресою реєстрації</div>
+                    <div class="flipswitch">
+                      <input required type="checkbox" checked id="adress-check" class="flipswitch-cb" name="flipswitch">
+                      <label for="adress-check" class="flipswitch-label">
+                        <div class="flipswitch-inner"></div>
+                        <div class="flipswitch-switch"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="registration-item">
+                <div class="registration-item__label">Адреси</div>
+                <div class="registration-item__body">
+                  <div class="input-block">
+                    <div class="input-block__label">Місце нарождення</div>
+                    <div class="input-block__input">
+                      <input name="born-place" type="text" placeholder="Введіть">
+                    </div>
+                  </div>
+                  <div class="input-block">
+                    <div class="input-block__label">Країна</div>
+                    <div class="input-block__input">
+                      <input name="country" type="text" placeholder="Введіть">
+                    </div>
+                  </div>
+                  <div class="registration__inputs-row">
+                    <div class="input-block">
+                      <div class="input-block__label">Область</div>
+                      <div class="input-block__input">
+                        <input name="area" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Район</div>
+                      <div class="input-block__input">
+                        <input name="district" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="registration__inputs-row">
+                    <div class="input-block">
+                      <div class="input-block__label">Тип нас.пункту</div>
+                      <div class="input-block__input">
+                        <input name="type-locality" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Населений пункт</div>
+                      <div class="input-block__input">
+                        <input name="locality" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="registration__inputs-row">
+                    <div class="input-block">
+                      <div class="input-block__label">Тип вулиці</div>
+                      <div class="input-block__input">
+                        <input name="type-street" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Вудиця</div>
+                      <div class="input-block__input">
+                        <input name="street" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="registration__inputs-row_three">
+                    <div class="input-block">
+                      <div class="input-block__label">Будинок</div>
+                      <div class="input-block__input">
+                        <input name="house" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Літера</div>
+                      <div class="input-block__input">
+                        <input name="corpus" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Квартира</div>
+                      <div class="input-block__input">
+                        <input name="appart" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="adress-leave" class="registration-item">
+                <div class="registration-item__label">Адреса проживання</div>
+                <div class="registration-item__body">
+                  <div class="input-block">
+                    <div class="input-block__label">Країна</div>
+                    <div class="input-block__input">
+                      <input name="country" type="text" placeholder="Введіть">
+                    </div>
+                  </div>
+                  <div class="registration__inputs-row">
+                    <div class="input-block">
+                      <div class="input-block__label">Область</div>
+                      <div class="input-block__input">
+                        <input name="area" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Район</div>
+                      <div class="input-block__input">
+                        <input name="district" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="registration__inputs-row">
+                    <div class="input-block">
+                      <div class="input-block__label">Тип нас.пункту</div>
+                      <div class="input-block__input">
+                        <input name="type-locality" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Населений пункт</div>
+                      <div class="input-block__input">
+                        <input name="locality" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="registration__inputs-row">
+                    <div class="input-block">
+                      <div class="input-block__label">Тип вулиці</div>
+                      <div class="input-block__input">
+                        <input name="type-street" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Вудиця</div>
+                      <div class="input-block__input">
+                        <input name="street" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="registration__inputs-row_three">
+                    <div class="input-block">
+                      <div class="input-block__label">Будинок</div>
+                      <div class="input-block__input">
+                        <input name="house" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Літера</div>
+                      <div class="input-block__input">
+                        <input name="corpus" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                    <div class="input-block">
+                      <div class="input-block__label">Квартира</div>
+                      <div class="input-block__input">
+                        <input name="appart" type="text" placeholder="Введіть">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="registration-item registration-item_top">
+                <div class="registration-item__label">Громадянство (для нерезидентів)</div>
+                <div class="registration-item__body">
+                  <div class="input-block">
+                    <div class="input-block__label">Місце нарождення</div>
+                    <div class="input-block__input">
+                      <input name="born-place_2" type="text" placeholder="Введіть">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="registration__btns">
+            <a href="#" class="registration__next-btn btn">Продовжити</a>
+            <a href="#" class="registration__back-btn grey-link">Повернутися назад</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    @@include('components/_footer.html')
+  </div>
+  @@include('components/_popups.html')
+
+
+
+  @@include('components/_scripts.html')
+  <script src="js/registration.js"></script>
+</body>
+
+</html>

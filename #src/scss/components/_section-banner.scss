@@ -1,0 +1,50 @@
+.banner {
+  background: linear-gradient(115.71deg, #EFF3FF 17.28%, #EFFFF8 104.92%);
+  padding: 70px 0 76px;
+  text-align: center;
+  font-family: 'Verdana', sans-serif;
+
+  @media(max-width: $md3) {
+    padding: 40px 0 43px;
+  }
+
+  @media(max-width: $md4) {
+    padding: 26px 0 26px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    @media(max-width: $md3) {
+      font-size: 32px;
+      margin-bottom: 26px;
+    }
+
+    @media(max-width: $md4) {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 26px;
+    line-height: 1.2em;
+    font-weight: bold;
+
+    @media(max-width: $md4) {
+      font-size: 14px;
+    }
+  }
+
+  &__text {
+    font-size: 26px;
+
+    @media(max-width: $md3) {
+      font-size: 21px;
+    }
+
+    @media(max-width: $md4) {
+      font-size: 16px;
+    }
+  }
+}
