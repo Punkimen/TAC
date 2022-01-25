@@ -41,8 +41,8 @@ let CreditCalc = function ($) {
   let handle = function () {
     summPlus.on('click', function (event) {
       let summFormat = + $(this).siblings('.summ').val().replace(/\s/g, '');
-      if (summFormat !== 10000) {
-        summFormat += 500;
+      if (summFormat !== 500000) {
+        summFormat += 1000;
         $(this).siblings('.summ').val(summFormat)
       }
       slideUpdate();
@@ -52,7 +52,7 @@ let CreditCalc = function ($) {
     summMinus.on('click', function (event) {
       let summFormat = + $(this).siblings('.summ').val().replace(/\s/g, '');
       if (summFormat !== 0) {
-        summFormat -= 500;
+        summFormat -= 1000;
         $(this).siblings('.summ').val(summFormat)
         getSumm.html(summFormat)
       }
@@ -220,7 +220,7 @@ function setInputFilter(textbox, inputFilter, val) {
 
 setInputFilter(document.getElementById("summ"), function (value) {
   return /^\d*\.?\d*$/.test(value); // Allow digits and '.' only, using a RegExp
-}, 10000);
+}, 500000);
 setInputFilter(document.getElementById("term"), function (value) {
   return /^\d*\.?\d*$/.test(value); // Allow digits and '.' only, using a RegExp
 }, 36);

@@ -1,6 +1,6 @@
 .header {
   background: #fff;
-  padding: 20px 0 20px;
+  padding: 26px 0 28px;
   position: relative;
 
   @media(max-width: $md4) {
@@ -176,6 +176,7 @@
 
   &__call-phone {
     font-weight: bold;
+    font-size: 16px;
   }
 }
 

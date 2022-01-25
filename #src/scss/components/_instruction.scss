@@ -42,6 +42,7 @@
   &__submit-btn {
     margin: 0 auto;
     font-size: 15px;
+    min-width: 255px;
 
     @media(max-width: $md4) {
       font-size: 14px;
@@ -90,8 +91,6 @@
     }
   }
 
-  &__content {}
-
   &__label {
     font-size: 26px;
     line-height: 1.2em;
@@ -113,6 +112,8 @@
   }
 
   &__text {
+    font-size: 20px;
+
     @media(max-width: $md3) {
       font-size: 14px;
     }

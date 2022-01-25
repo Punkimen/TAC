@@ -2,12 +2,10 @@
 // main func
 $(window).on('resize', function () {
   navToMobile();
-  footerAccord()
-
+  footerColChanged()
 });
 navToMobile();
-footerAccord()
-
+footerColChanged()
 // main func end
 
 // header
@@ -31,26 +29,46 @@ function navToMobile() {
 
 // header end
 
+// scroll=href
+$('[scroll-href]').on('click', function (e) {
+  e.preventDefault();
+  const id = $(this).attr('scroll-href');
+
+  $([document.documentElement, document.body]).animate({
+    scrollTop: $(id).offset().top
+  }, 1300);
+
+})
+
 // footer
 
-function footerAccord() {
-  let windowWidth = $(window).width();
-  if (windowWidth <= 767) {
-    $('.footer-accord__opened .footer-col__label').on('click', function () {
-      $(this).toggleClass('active')
-      if (!$(this).next().hasClass('show')) {
-        $(this).next().addClass('show')
-      } else {
-        $(this).next().removeClass('show')
-      }
-    })
+function footerColChanged() {
+  const windowWidth = $(window).width();
+  if (windowWidth < 992) {
+    $('.footer-top__right').prepend($('.footer-phone'))
   } else {
-    $(this).next().show()
-    $('.footer-accord__opened .footer-col__label').on('click', function () {
-      return false
-    })
-  }
+    $('.footer-top__left').append($('.footer-phone'))
+  };
 }
+
+// function footerAccord() {
+//   let windowWidth = $(window).width();
+//   if (windowWidth <= 767) {
+//     $('.footer-accord__opened .footer-col__label').on('click', function () {
+//       $(this).toggleClass('active')
+//       if (!$(this).next().hasClass('show')) {
+//         $(this).next().addClass('show')
+//       } else {
+//         $(this).next().removeClass('show')
+//       }
+//     })
+//   } else {
+//     $(this).next().show()
+//     $('.footer-accord__opened .footer-col__label').on('click', function () {
+//       return false
+//     })
+//   }
+// }
 
 
 // footer end
