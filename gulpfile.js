@@ -12,6 +12,7 @@ let path = {
         fonts: project_folder + '/fonts/',
         video: project_folder + '/video/',
         php: project_folder + '/',
+        pdf: project_folder + '/pdf/',
     },
     src: {
         html: [source_folder + '/html/**/*.html', '!' + source_folder + '/html/**/_*.html'],
@@ -23,6 +24,7 @@ let path = {
         fonts: source_folder + '/fonts/*.ttf',
         video: source_folder + '/video/*.mp4',
         php: source_folder + '/mail/**/*.php',
+        pdf: source_folder + '/pdf/*.pdf',
     },
     watch: {
         html: source_folder + '/**/*.html',
@@ -31,6 +33,7 @@ let path = {
         img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico,webp}',
         svg: source_folder + '/iconsprite/*.svg',
         php: source_folder + '/mail/**/*.php',
+        pdf: source_folder + '/pdf/*.pdf',
     },
     clean: './' + project_folder + '/'
 };
@@ -145,7 +148,11 @@ function php() {
         .pipe(dest(path.build.php))
         .pipe(browsersync.stream())
 }
-
+function pdf() {
+    return src(path.src.pdf)
+        .pipe(dest(path.build.pdf))
+        .pipe(browsersync.stream())
+}
 function fontsStyle(params) {
 
     let file_content = fs.readFileSync(source_folder + '/scss/_fonts.scss');
@@ -175,6 +182,7 @@ function watchFiles() {
     gulp.watch([path.watch.img], images)
     gulp.watch([path.watch.svg], svg)
     gulp.watch([path.watch.php], php)
+    gulp.watch([path.watch.pdf], pdf)
 
 }
 
@@ -182,13 +190,14 @@ function clean() {
     return del(path.clean)
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, svg, video, php), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, svg, video, php, pdf), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.video = video;
-exports.php = php; php
+exports.php = php;
+exports.pdf = pdf;
 exports.svg = svg;
 exports.images = images;
 exports.js = js;
