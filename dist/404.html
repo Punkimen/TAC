@@ -12,6 +12,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/vendor/jquery-ui.min.css">
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
 <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -45,7 +47,7 @@
         </ul>
       </nav>
       <div class="header__call">
-        <button class="header__call-btn btn btn-transparent">
+        <button scroll-href="#form-questions" class="header__call-btn btn btn-transparent">
           <span>Дзвінок</span>
           <img src="img/icon/phone-call.svg" alt="" class="header__call-icon">
         </button>
@@ -180,25 +182,25 @@
         <form class="login__form">
           <div class="login__form-item">
             <label>Особистий телефон</label>
-            <input name="phone" type="text">
+            <input class="input-phone" name="phone" type="text" required>
           </div>
           <div class="login__form-item">
             <label>Ім’я</label>
-            <input name="name" type="text">
+            <input name="name" type="text" required>
           </div>
           <div class="login__form-item">
             <label>ІПН</label>
-            <input name="name" type="text">
+            <input name="ipn" type="text" required>
           </div>
           <label class="control control-checkbox">
             <div class="contol-group__text">Дозволяю обробку персональних даних згідно <a href="#"
                 class="blue-link">Умов Банку</a> та погоджуюсь з умовами оформлення заявки</div>
-            <input type="checkbox" name="checkbox" checked />
+            <input type="checkbox" name="checkbox" checked required />
             <div class="control_indicator"></div>
           </label>
-          <a href="#" class="popup-btn btn">Отримати кредит</a>
+          <a href="step_1.html" id="login-btn" class="popup-btn btn">Отримати кредит</a>
           <div class="login__register">
-            <a href="#" class="login__regist btn-str">Повернутися на головну</a>
+            <a href="/" class="login__regist btn-str">Повернутися на головну</a>
           </div>
         </form>
       </div>
@@ -239,6 +241,18 @@
         </div>
       </div>
     </div>
+    <div id="popup__universal" class="popup">
+      <div class="popup__content">
+        <div class="popup__title">Чудова новина!</div>
+        <div class="sent__text popup__text">Ваш кредит схвалений!</div>
+        <button type="button" class="popup-btn btn js-close-popup btn-bg">
+          Продовжити
+        </button>
+      </div>
+      <a href="#" class="popup__exit js-close-popup">
+        <img src="img//icon/close.svg" alt="">
+      </a>
+    </div>
   </div>
 </div>
 
@@ -247,6 +261,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="js/vendor.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"
+  integrity="sha512-kZsqvmw94Y8hyhwtWZJvDtobwQ9pLhF1DuIvcqSuracbRn6WJs1Ih+04fpH/8d1CFKysp7XA1tR0Aa2jKLTQUg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+  integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+  integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/script.js"></script>
 
 </body>

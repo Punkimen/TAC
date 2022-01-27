@@ -33,7 +33,10 @@
                       </div>
                     </div>
                   </div>
-                  <div class="slider"></div>
+                  <div class="slider">
+                    <input id="calculation-range-summ" class="costum-range" type="range" min="1000" max="500000"
+                      step="1000" value="20000">
+                  </div>
                 </div>
                 <div class="сalc__quantity">
                   <div class="quantity__left">
@@ -52,8 +55,8 @@
                       <div class="info__inp-btn date_minus">
                         <span></span>
                       </div>
-                      <input type="text" class="text term" id="term" name="s" value="20" data-max="36" data-min="3"
-                        data-min-event="0" data-step="1" data-k="1">
+                      <input type="text" class="text term" id="term" name="s" value="12" data-max="60" data-min="6"
+                        readonly data-min-event="1" data-step="6" data-k="1">
                       <div class="info__inp-btn date_plus">
                         <span></span>
                         <span class="up"></span>
@@ -61,14 +64,16 @@
                     </div>
                   </div>
                   <div class="slider">
+                    <input id="calculation-range-term" class="costum-range" type="range" min="6" max="60" step="6"
+                      value="12">
                   </div>
                 </div>
                 <div class="сalc__quantity">
                   <div class="quantity__left">
-                    3 <span>месяца</span>
+                    6 <span>месяца</span>
                   </div>
                   <div class="quantity__right">
-                    36 <span>месяцев</span>
+                    60 <span>месяцев</span>
                   </div>
                 </div>
               </div>

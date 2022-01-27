@@ -37,25 +37,25 @@
         <form class="login__form">
           <div class="login__form-item">
             <label>Особистий телефон</label>
-            <input name="phone" type="text">
+            <input class="input-phone" name="phone" type="text" required>
           </div>
           <div class="login__form-item">
             <label>Ім’я</label>
-            <input name="name" type="text">
+            <input name="name" type="text" required>
           </div>
           <div class="login__form-item">
             <label>ІПН</label>
-            <input name="name" type="text">
+            <input name="ipn" type="text" required>
           </div>
           <label class="control control-checkbox">
             <div class="contol-group__text">Дозволяю обробку персональних даних згідно <a href="#"
                 class="blue-link">Умов Банку</a> та погоджуюсь з умовами оформлення заявки</div>
-            <input type="checkbox" name="checkbox" checked />
+            <input type="checkbox" name="checkbox" checked required />
             <div class="control_indicator"></div>
           </label>
-          <a href="#" class="popup-btn btn">Отримати кредит</a>
+          <a href="step_1.html" id="login-btn" class="popup-btn btn">Отримати кредит</a>
           <div class="login__register">
-            <a href="#" class="login__regist btn-str">Повернутися на головну</a>
+            <a href="/" class="login__regist btn-str">Повернутися на головну</a>
           </div>
         </form>
       </div>
@@ -95,6 +95,18 @@
           <a href="#" class="login__regist btn-str">Відмовитися</a>
         </div>
       </div>
+    </div>
+    <div id="popup__universal" class="popup">
+      <div class="popup__content">
+        <div class="popup__title">Чудова новина!</div>
+        <div class="sent__text popup__text">Ваш кредит схвалений!</div>
+        <button type="button" class="popup-btn btn js-close-popup btn-bg">
+          Продовжити
+        </button>
+      </div>
+      <a href="#" class="popup__exit js-close-popup">
+        <img src="img//icon/close.svg" alt="">
+      </a>
     </div>
   </div>
 </div>

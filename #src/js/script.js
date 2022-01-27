@@ -25,8 +25,6 @@ function navToMobile() {
     $('.header__logo').after($('.header__nav'))
   };
 };
-
-
 // header end
 
 // scroll=href
@@ -41,7 +39,6 @@ $('[scroll-href]').on('click', function (e) {
 })
 
 // footer
-
 function footerColChanged() {
   const windowWidth = $(window).width();
   if (windowWidth < 992) {
@@ -50,28 +47,6 @@ function footerColChanged() {
     $('.footer-top__left').append($('.footer-phone'))
   };
 }
-
-// function footerAccord() {
-//   let windowWidth = $(window).width();
-//   if (windowWidth <= 767) {
-//     $('.footer-accord__opened .footer-col__label').on('click', function () {
-//       $(this).toggleClass('active')
-//       if (!$(this).next().hasClass('show')) {
-//         $(this).next().addClass('show')
-//       } else {
-//         $(this).next().removeClass('show')
-//       }
-//     })
-//   } else {
-//     $(this).next().show()
-//     $('.footer-accord__opened .footer-col__label').on('click', function () {
-//       return false
-//     })
-//   }
-// }
-
-
-// footer end
 
 // popup
 const timer = (seconds, el, cb) => {
@@ -114,6 +89,11 @@ function noCloseClosePopup() {
   $('.popups-noclose').hide();
   $('.popup').removeClass('show')
 }
+function renderUniversalPopup(title, text) {
+  $('#popup__universal .popup__title').text(title)
+  $('#popup__universal .popup__text').text(text)
+}
+
 $('[data-popup]').on('click', function (e) {
   e.preventDefault()
 
@@ -133,3 +113,37 @@ document.addEventListener('click', e => {
   }
 });
 // popup end
+
+// validation
+jQuery.extend(jQuery.validator.messages, {
+  required: "Заповніть поле",
+});
+
+$.jMaskGlobals.translation["d"] = $.jMaskGlobals.translation["0"];
+delete $.jMaskGlobals.translation["0"];
+$('.input-phone').mask('+38 (0ZZ) ZZZ-ZZ-ZZ', {
+  nonInput: [0],
+  translation: {
+    'Z': {
+      pattern: /[0-9]/, optional: true
+    },
+  },
+});
+
+$('.login__form').validate();
+$('.form-quest').validate();
+$('#login-btn').on('click', function (e) {
+  e.preventDefault();
+  if ($('.login__form').valid()) {
+    $('.login__form').submit()
+    window.location.href = 'step_1.html';
+  }
+})
+$('.form-questions__btn').on('click', function (e) {
+  e.preventDefault();
+  if ($('.form-quest').valid()) {
+    renderUniversalPopup("Успішно", "Ваша заявка успішно відправлена очікуйте дзвінка")
+    showPopup("#popup__universal")
+    // $('.form-quest').submit()
+  }
+})

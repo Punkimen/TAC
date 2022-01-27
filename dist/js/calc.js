@@ -1,242 +1,223 @@
 "use strict";
-// calc
 
-let CreditCalc = function ($) {
-  'use strict';
-  const productBtn = $('.credits-head__item')
-
-  const numberWithCommas = (x) => {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  }
-  let inputs = $('.number-input');
-  let prod = 1;
-  productBtn.on('click', function () {
-    $(this).addClass('current').siblings().removeClass('current');
-    if ($(this).is('#product1')) {
-      $('.wrap__content--product1').show(200);
-      $('.wrap__content--product2').hide(200);
-    } else if ($(this).is('#product2')) {
-      $('.wrap__content--product1').hide(200);
-      $('.wrap__content--product2').show(200);
-    }
-
-    if ($('#product1').is('.current')) {
-      prod = 1;
-    } else if ($('#product2').is('.current')) {
-      prod = 2
-    }
-    return prod = prod;
-  })
+// const calc = () => {
+//   let termplusSumm = $('.date_plusSumm'),
+//     termminusSumm = $('.date_minusSumm'),
+//     summplusSumm = $('.sum_plusSumm'),
+//     summminusSumm = $('.sum_minusSumm'),
+//     getSumm = $('.get__sum');
+//   let handle = function () {
 
 
-  inputs.on('change', function () {
 
-  })
-  let termPlus = $('.date_plus'),
-    termMinus = $('.date_minus'),
-    summPlus = $('.sum_plus'),
-    summMinus = $('.sum_minus'),
-    getSumm = $('.get__sum');
+//     summminusSumm.on('click', function (event) {
+//       let summFormat = + $(this).siblings('.summ').val().replace(/\s/g, '');
+//       if (summFormat !== 0) {
+//         summFormat -= 1000;
+//         $('#summ').val($('#calculation-range-summ').val(summFormat))
+//       }
+//     })
 
-  let handle = function () {
-    summPlus.on('click', function (event) {
-      let summFormat = + $(this).siblings('.summ').val().replace(/\s/g, '');
-      if (summFormat !== 500000) {
-        summFormat += 1000;
-        $(this).siblings('.summ').val(summFormat)
-      }
-      slideUpdate();
-      calc();
-    })
+//     termplusSumm.on('click', function (event) {
+//       let term = +$(this).siblings('.term').val().replace(/\s/g, '');
+//       if (term !== 60 && term !== 6) {
+//         term += 12;
+//         $('#term').val($('#calculation-range-term').val(term))
+//       } else if (term == 6) {
+//         term += 6;
+//         $('#term').val($('#calculation-range-term').val(term))
+//       }
+//     })
+//     termminusSumm.on('click', function (event) {
+//       let term = +$(this).siblings('.term').val().replace(/\s/g, '');
 
-    summMinus.on('click', function (event) {
-      let summFormat = + $(this).siblings('.summ').val().replace(/\s/g, '');
-      if (summFormat !== 0) {
-        summFormat -= 1000;
-        $(this).siblings('.summ').val(summFormat)
-        getSumm.html(summFormat)
-      }
-      slideUpdate();
-      calc();
-    })
+//       if (term !== 6 && term !== 12) {
+//         term -= 12;
+//         $('#term').val($('#calculation-range-term').val(term))
+//       } else if (term == 12) {
+//         term -= 6;
+//         $('#term').val($('#calculation-range-term').val(term))
+//       }
+//     })
 
-    termPlus.on('click', function (event) {
-      let term = +$(this).siblings('.term').val().replace(/\s/g, '');
+//   };
+//   handle();
+//   $('#calculation-range-summ').ionRangeSlider({
+//     min: $('#calculation-range-summ').attr('min'),
+//     max: $('#calculation-range-summ').attr('max'),
+//     step: $('#calculation-range-summ').attr('step'),
+//     hide_min_max: true,
+//     hide_from_to: true,
+//     onStart: function (data) {
+//       $('#summ').val($('#calculation-range-summ').val())
+//     },
+//     onChange: function (data) {
+//       $('#summ').val($('#calculation-range-summ').val())
+//     },
+//     onFinish: function (data) {
+//       $('#summ').val($('#calculation-range-summ').val())
+//     },
+//     onUpdate: function (data) {
+//       $('#summ').val($('#calculation-range-summ').val())
+//     },
+//   })
+//   $('#calculation-range-term').ionRangeSlider({
+//     min: $('#calculation-range-term').attr('min'),
+//     max: $('#calculation-range-term').attr('max'),
+//     step: $('#calculation-range-term').attr('step'),
+//     hide_min_max: true,
+//     hide_from_to: true,
+//     onStart: function (data) {
+//       $('#term').val($('#calculation-range-term').val())
+//     },
+//     onChange: function (data) {
+//       $('#term').val($('#calculation-range-term').val())
+//     },
+//     onFinish: function (data) {
+//       $('#term').val($('#calculation-range-term').val())
+//     },
+//     onUpdate: function (data) {
+//       $('#term').val($('#calculation-range-term').val())
+//     }
+//   })
+// }
+// calc()
 
-      if (prod == 1) {
-        if (term !== 36) {
-          term += 1;
-          $(this).siblings('.term').val(term)
-        }
-      } else {
-        if (term !== 30) {
-          term += 1;
-          $(this).siblings('.term').val(term)
-        }
-      }
-      slideUpdate();
-      calc();
-    })
-    termMinus.on('click', function (event) {
-      let term = +$(this).siblings('.term').val().replace(/\s/g, '');
-      if (prod == 1) {
-        if (term !== 3) {
-          term--;
-          $(this).siblings('.term').val(term)
-        }
-      } else {
-        if (term !== 1) {
-          term--;
-          $(this).siblings('.term').val(term)
-        }
-      }
-      slideUpdate();
-      calc();
-    })
+const calc = () => {
+  // calc
+  let $range = $("#calculation-range-summ"),
+    $rangeTerm = $("#calculation-range-term"),
+    $inputSumm = $("#summ"),
+    $inputTerm = $("#term"),
+    instanceSumm,
+    instanceTerm,
+    minSumm = 1000,
+    maxSumm = 500000,
+    minTerm = 6,
+    maxTerm = 60,
+    plusSumm = $('.sum_plus'),
+    minusSumm = $('.sum_minus'),
+    plusTerm = $('.date_plus'),
+    minusTerm = $('.date_minus');
 
-  };
-  let calc = function () {
-    let summFormat = $('#summ').val(),//Сумма отформатированная
 
-      summ = Number.parseInt( //Сумма без форматирования
-        summFormat.replace(/\s/g, '')
-      ),
-
-      term = Number.parseInt($('#term').val()),//срок
-      commission = 0,//Комиссия
-      persent = 0.01,//думаю, можно менять в зависмости от срок займа
-      cresitSumm = summ / term,//Сумма возврата без форматирования
-      cresitSummFormat = numberWithCommas(Math.round(cresitSumm));//Сумма возврата отформатированная
-
-    persent = numberWithCommas(persent);
-
-    $('#get__sum').text(summFormat);
-    $('#return__sum').text(cresitSummFormat);
-    let left__pos = term * 0.7 + '%';
-    let persent__block = $('.info__percent');
-    let day__block = $('.quantity__center');
-    let day__inp = term * 0.3;
-    let day__inner = (Math.round(day__inp));
-    persent__block.css({
-      left: left__pos,
-    })
-    day__block.css({
-      left: left__pos,
-    })
-    if (day__inner == 3 || day__inner == 4) {
-      day__block.html(day__inner + ' дня');
-    } else {
-      day__block.html(day__inner + ' дней');
-    }
-  }
-  let slide = function (obj) {
-    let input = obj.find('input'),
-      k = parseInt(input.attr('data-k')),
-      min = parseFloat(input.attr('data-min')) * k,
-      max = parseFloat(input.attr('data-max')) * k,
-      step = parseFloat(input.attr('data-step')) * k,
-      val = parseFloat(input.val()) * k,
-      minEvemt = input.attr('data-min-event');
-
-    input.val(numberWithCommas(input.val()));
-    input.keyup(function () {
-      var val = $(this).val();
-      val = val.replace(/\s+/g, "");
-      val = val.replace(/,/g, ".");
-
-      $(this).val(numberWithCommas(val));
-      if (val == '')
-        val = 0;
-      else
-        val = parseFloat(val) * k;
-
-      $(this).closest('.range').find('.slider').slider({ value: val });
-    });
-    obj.find(".slider").slider({
-      min: min,
-      max: max,
-      step: step,
-      range: "min",
-      value: val,
-      slide: function (event, ui) {
-        var k = parseInt(input.attr('data-k'));
-        var val = parseFloat(ui.value) / k;
-        if (minEvemt && ui.value < minEvemt)
-          return false;
-        if (val)
-          input.val(numberWithCommas(val));
-      },
-      change: function (event, ui) {
-        calc();
-      }
-    });
-
-  }
-  let slideUpdate = function () {
-    $('.range').each(function (obj, i) {
-      let $slider = $(this).find(".slider"),
-        val = $(this).find("input").val();
-      $slider.slider('value', val);
-    });
-  }
-  let initialisation = function () {
-    $('.range').each(function (obj, i) {
-      slide($(this));
-    });
-    handle();
-    calc();
-  };
-  return {
-    init: function () {
-      initialisation();
+  // summ
+  $('#calculation-range-summ').ionRangeSlider({
+    min: minSumm,
+    max: maxSumm,
+    step: 500,
+    hide_min_max: true,
+    hide_from_to: true,
+    onStart: function (data) {
+      $inputSumm.prop("value", data.from);
+      calculation()
     },
-  }
-}(jQuery);
-jQuery(document).ready(function ($) {
-  CreditCalc.init();
-});
+    onChange: function (data) {
+      $inputSumm.prop("value", data.from);
+      calculation()
+    }
+  })
+  instanceSumm = $range.data("ionRangeSlider");
+  $inputSumm.on("input", function () {
+    var val = $(this).prop("value");
+    // validate
+    if (val < minSumm) {
+      val = minSumm;
+    } else if (val > maxSumm) {
+      val = maxSumm;
+    }
 
-
-function setInputFilter(textbox, inputFilter, val) {
-  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function (event) {
-    textbox.addEventListener(event, function () {
-      if (textbox.value > val) {
-        this.value = val;
-      } else {
-        if (inputFilter(this.value)) {
-          this.oldValue = this.value;
-          this.oldSelectionStart = this.selectionStart;
-          this.oldSelectionEnd = this.selectionEnd;
-        } else if (this.hasOwnProperty("oldValue")) {
-          this.value = this.oldValue;
-          this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-        } else {
-          this.value = val;
-        }
-      }
+    instanceSumm.update({
+      from: val
     });
+    calculation()
   });
-}
+  plusSumm.on('click', function () {
+    let value = +$inputSumm.val()
+    value += 500;
+    if (value > maxSumm) {
+      return false
+    }
+    $inputSumm.val(value)
+    instanceSumm.update({
+      from: value
+    });
+    calculation()
+  })
+  minusSumm.on('click', function () {
+    let value = +$inputSumm.val()
+    value -= 500;
+    if (value < minSumm) {
+      return false
+    }
+    $inputSumm.val(value)
+    instanceSumm.update({
+      from: value
+    });
+    calculation()
+  })
+  // summEnd
 
-setInputFilter(document.getElementById("summ"), function (value) {
-  return /^\d*\.?\d*$/.test(value); // Allow digits and '.' only, using a RegExp
-}, 500000);
-setInputFilter(document.getElementById("term"), function (value) {
-  return /^\d*\.?\d*$/.test(value); // Allow digits and '.' only, using a RegExp
-}, 36);
-// calc end
+  //term
+  var custom_values = [6, 12, 24, 36, 48, 60];
+  var my_from = custom_values[0];
 
-// calc postion change 
-function changePos() {
-  const windowWidth = $(window).width();
-  if (windowWidth < 992) {
-    $('.credits').after($('.credits__calc'))
-  } else {
-    $('.credits__content').after($('.credits__calc'))
-  };
+  $('#calculation-range-term').ionRangeSlider({
+    // min: minTerm,
+    // max: maxTerm,
+    // from: my_from,
+    values: custom_values,
+    hide_min_max: true,
+    hide_from_to: true,
+    onStart: function (data) {
+      $inputTerm.prop("value", custom_values[data.from]);
+      calculation()
+    },
+    onChange: function (data) {
+      $inputTerm.prop("value", custom_values[data.from]);
+      calculation()
+    }
+  })
+  instanceTerm = $rangeTerm.data("ionRangeSlider");
+
+  plusTerm.on('click', function () {
+    console.log(custom_values.length);
+
+    if (custom_values.length - 1 > instanceTerm.old_from) {
+      let value = custom_values[instanceTerm.old_from + 1]
+      $inputTerm.val(value)
+      instanceTerm.update({
+        from: instanceTerm.old_from + 1
+      });
+      calculation()
+    } else {
+      return false
+    }
+  })
+  minusTerm.on('click', function () {
+    if (instanceTerm.old_from != 0) {
+      let value = custom_values[instanceTerm.old_from - 1]
+      $inputTerm.val(value)
+      instanceTerm.update({
+        from: instanceTerm.old_from - 1
+      });
+      calculation()
+    } else {
+      return false
+    }
+  })
+
+  //term end
+
+  function calculation() {
+    let summ = +$('#summ').val();
+    let term = +$('#term').val();
+    let percent = 0.01;
+    let creditSumm = summ / term
+    let creditSummFormat = Math.round(creditSumm);
+    $('#return__sum').text(creditSummFormat)
+  }
+  calculation()
 }
-changePos();
-$(window).on('resize', function () {
-  changePos();
-});
-// calc postion change end
+calc()
+// calc

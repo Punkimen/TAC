@@ -223,7 +223,9 @@ input {
     }
 
     &.error {
+        padding: 9px 15px;
         border-color: #F93232;
+        overflow: visible;
     }
 }
 
@@ -253,11 +255,15 @@ textarea {
     }
 
     &.error {
+        padding: 9px 15px;
         border-color: #F93232;
+        overflow: visible;
     }
 }
 
 label.error {
+    padding: 0;
+    margin-bottom: 0 !important;
     white-space: nowrap;
     overflow: hidden;
     position: absolute;
